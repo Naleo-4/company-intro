@@ -2,9 +2,10 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
+<partial name="_Notification" />
 <h1>Create</h1>
 <form method="POST" asp-action="Edit">
+    <input asp-for="ID" hidden>
     <div class="border p-3 mt-4">
         <h2 class="text-primary">Edit Category</h2>
         <hr>

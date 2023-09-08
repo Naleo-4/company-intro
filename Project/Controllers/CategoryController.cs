@@ -13,7 +13,7 @@ public class CategoryController : Controller
     }
     public IActionResult Index()
     {
-        IEnumerable<Category> CategoryList = _context.Categories;
+        List<Category> CategoryList = _context.Categories.ToList();
         return View(CategoryList);
     }
     //Get
@@ -30,6 +30,7 @@ public class CategoryController : Controller
         {
             _context.Categories.Add(category);
             _context.SaveChanges();
+            TempData["Success"] = "Category Added Successfully";
             return RedirectToAction("Index", "Category");
         }
         return View(category);
@@ -61,6 +62,7 @@ public class CategoryController : Controller
         {
             _context.Categories.Update(category);
             _context.SaveChanges();
+            TempData["Success"] = "Category Updated Successfully";
             return RedirectToAction("Index", "Category");
         }
         return View(category);
@@ -95,6 +97,7 @@ public class CategoryController : Controller
         }
         _context.Categories.Remove(category);
         _context.SaveChanges();
+        TempData["Success"] = "Category Deleted Successfully";
         return RedirectToAction("Index", "Category");
     }
 
