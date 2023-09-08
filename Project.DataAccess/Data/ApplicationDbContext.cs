@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Project.Models;
+using Project.Models.Models;
 
-namespace Project.Data;
+namespace Project.DataAccess.Data;
 public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options){

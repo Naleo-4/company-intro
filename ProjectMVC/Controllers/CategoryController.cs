@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Project.Data;
-using Project.Models;
+using Project.DataAccess.Data;
+using Project.Models.Models;
 
-namespace Project.Controllers;
+namespace ProjectMVC.Controllers;
 
 public class CategoryController : Controller
 {
