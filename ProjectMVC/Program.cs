@@ -1,5 +1,8 @@
 using Project.DataAccess.Data;
 using Microsoft.EntityFrameworkCore;
+using Project.DataAccess.Repository.IRepository;
+using Project.DataAccess.Repository;
+using ProjectMVC.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +16,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(
 builder.Configuration.GetConnectionString("DefaultConnection")
 ));
-
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
