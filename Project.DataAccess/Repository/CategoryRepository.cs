@@ -9,7 +9,7 @@ using Project.Models.Models;
 
 namespace Project.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>,  ICategoryRepository
+    public class CategoryRepository : Repository<Category>, ICategoryRepository
     {
         private ApplicationDbContext _db;
 
@@ -20,11 +20,6 @@ namespace Project.DataAccess.Repository
         public void Update(Category category)
         {
             _db.Update(category);
-        }
-
-        public void Save()
-        {
-            _db.SaveChanges();
         }
     }
 }

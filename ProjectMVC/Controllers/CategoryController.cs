@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Project.DataAccess.Data;
+using Project.DataAccess.Repository;
 using Project.DataAccess.Repository.IRepository;
 using Project.Models.Models;
 
@@ -7,14 +8,14 @@ namespace ProjectMVC.Controllers;
 
 public class CategoryController : Controller
 {
-    private readonly ICategoryRepository _CategoryRepos;
-    public CategoryController(ICategoryRepository db)
+    private readonly IUnitOfWork _unitOfWork;
+    public CategoryController(IUnitOfWork unitOfWork)
     {
-        _CategoryRepos = db;
+        _unitOfWork = unitOfWork;
     }
     public IActionResult Index()
     {
-        List<Category> CategoryList = _CategoryRepos.GetAll().ToList();
+        List<Category> CategoryList = _unitOfWork.CategoryRepository.GetAll().ToList(); 
         return View(CategoryList);
     }
     //Get
@@ -29,8 +30,8 @@ public class CategoryController : Controller
     {
         if (ModelState.IsValid)
         {
-            _CategoryRepos.Add(category);
-            _CategoryRepos.Save();
+            _unitOfWork.CategoryRepository.Add(category);
+            _unitOfWork.Save();
             TempData["Success"] = "Category Added Successfully";
             return RedirectToAction("Index", "Category");
         }
@@ -44,9 +45,9 @@ public class CategoryController : Controller
         {
             return NotFound();
         }
-        Category? category = _CategoryRepos.Get(c => c.ID == id);
-        // Category? categoryFromDBFirst = _CategoryRepos.Categories.FirstOrDefault(c => c.ID == id);
-        // Category? categoryFromDBSingle = _CategoryRepos.Categories.SingleOrDefault(c => c.ID == id);
+        Category? category = _unitOfWork.CategoryRepository.Get(c => c.ID == id);
+        // Category? categoryFromDBFirst = UnitOfWork..Categories.FirstOrDefault(c => c.ID == id);
+        // Category? categoryFromDBSingle = UnitOfWork..Categories.SingleOrDefault(c => c.ID == id);
         if (category == null)
         {
             return NotFound();
@@ -61,8 +62,8 @@ public class CategoryController : Controller
     {
         if (ModelState.IsValid)
         {
-            _CategoryRepos.Update(category);
-            _CategoryRepos.Save();
+            _unitOfWork.CategoryRepository.Update(category);
+            _unitOfWork.Save();
             TempData["Success"] = "Category Updated Successfully";
             return RedirectToAction("Index", "Category");
         }
@@ -76,9 +77,9 @@ public class CategoryController : Controller
         {
             return NotFound();
         }
-        var category = _CategoryRepos.Get(c => c.ID == id);
-        // var categoryFromDBFirst = _CategoryRepos.Categories.FirstOrDefault(c => c.ID == id);
-        // var categoryFromDBSingle = _CategoryRepos.Categories.SingleOrDefault(c => c.ID == id);
+        var category = _unitOfWork.CategoryRepository.Get(c => c.ID == id);
+        // var categoryFromDBFirst = UnitOfWork..Categories.FirstOrDefault(c => c.ID == id);
+        // var categoryFromDBSingle = UnitOfWork..Categories.SingleOrDefault(c => c.ID == id);
         if (category == null)
         {
             return NotFound();
@@ -91,13 +92,13 @@ public class CategoryController : Controller
     // [ValidateAntiForgeryToken]
     public IActionResult DeletePOST(int? id)
     {
-        var category = _CategoryRepos.Get(c => c.ID == id);
+        var category = _unitOfWork.CategoryRepository.Get(c => c.ID == id);
         if (category == null)
         {
             return NotFound();
         }
-        _CategoryRepos.Remove(category);
-        _CategoryRepos.Save();
+        _unitOfWork.CategoryRepository.Remove(category);
+        _unitOfWork.Save();
         TempData["Success"] = "Category Deleted Successfully";
         return RedirectToAction("Index", "Category");
     }
