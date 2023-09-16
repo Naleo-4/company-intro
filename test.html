@@ -1,0 +1,26 @@
+<img class="mySlides" src="\image\bOvf94dPRxWu0u3QsPjF_tree.jpg">
+<img class="mySlides" src="ProjectMVC\wwwroot\image\peacock-pen-alluring-yet-lure-65894.jpeg">
+<img class="mySlides" src="ProjectMVC\wwwroot\image\pexels-blaque-x-863963.jpg">
+<img class="mySlides" src="ProjectMVC\wwwroot\image\photo-1595126739121-68ab4225f9cf.jpg">
+<div class="mySlides">
+    <div class="w3-container w3-red">
+        <h1><b>Did You Know?</b></h1>
+        <h1><i>We plan to sell trips to the moon in the 2020s</i></h1>
+    </div>
+</div>
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) { slideIndex = 1 }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
