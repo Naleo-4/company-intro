@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>@ViewData["Title"] - Project</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjectMVC.styles.css" asp-append-version="true" />
@@ -14,7 +14,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="TLD Apparel - High Quality Jacket Manufacturer in Vietnam" />
     <meta property="og:description"
-        content="TLD Apparel - High Quality Jacket Manufacturer in Vietnam. Best Price. Fast Shipping. Good customer Service" />
+    content="TLD Apparel - High Quality Jacket Manufacturer in Vietnam. Best Price. Fast Shipping. Good customer
+    Service" />
     <meta property="og:url" content="https://tld-apparel.com/" />
     <meta property="og:site_name" content="A Sportswear &amp; Activewear Manufacturer &amp; Supplier in Vietnam" />
     <meta property="article:publisher" content="https://www.facebook.com/tldapparelvietnam/" />
@@ -28,7 +29,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+            <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Junipex</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,95 +93,28 @@
                                 <li><a class="dropdown-item" href="#">DorasPham@@junipex.vn</a></li>
                             </ul>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home"
+                                asp-action="Contact">Contact Us</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="navbar-collapse collapse d-sm-inline-flex">
-                    <ul class="navbar-nav flex-grow-1 justify-content-bettwen">
+                    <ul class="navbar-nav flex-grow-1 justify-content-end">
                         <li>
                             <a href=# target="_blank">
-                                <i class="bi bi-facebook text-white p-2"></i></a>
+                                <i class="bi bi-facebook text-white ps-4"></i></a>
                         </li>
                         <li><a href=# target="_blank">
-                                <i class="bi bi-twitter text-white p-2"></i></a>
+                                <i class="bi bi-twitter text-white ps-4"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="\image\1.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="\image\2.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="\image\3.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="\image\4.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div class="container-fluid p-1">
-        <div class="container text-center">
-            <div class="row align-items-center p-1 m-1">
-                <div class="col mt-5">
-                    <img src="\image\5.png" class="img-fluid" alt="...">
-                </div>
-                <div class="col mt-5">
-                    <div class="mt-5">
-                        <h2>WELCOME TO JUNIPEX</h2>
-                    </div>
-                    <div class="mt-5">
-                        <p>Junipex is a reliable apparel manufacturer &amp;
-                            supplier in Vietnam. We can produce a variety of
-                            different costumes.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid p-5 m-5">
-        <main role="main" class="px-5">
+    <div class="container-fluid">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
@@ -188,9 +122,9 @@
         <div class="card-footer">
             <div class="container text-center p-2">
                 <div class="align-items-center">
-                            <h4 class="sub-description">
-                                Junipex - A Sportswear &amp; Activewear Manufacturer &amp;
-                                Supplier in Vietnam </h4>
+                    <h4 class="sub-description">
+                        Junipex &amp;Apparel Manufacturer &amp;
+                        Supplier in Vietnam </h4>
                 </div>
             </div>
             <div class="container">
@@ -202,7 +136,7 @@
                                 <div class="">
                                     <ul class="">
                                         <li><i class="bi bi-geo-alt"></i> Ha Noi</li>
-                                        <li><i class="bi bi-envelope"></i></i> info@@junipex.vn/li>
+                                        <li><i class="bi bi-envelope"></i></i> info@@junipex.vn</li>
                                         <li><i class="bi bi-telephone"></i>+84 981037349</li>
                                         <li><i class="bi bi-globe"></i></i> <a href="#">Visit
                                                 our themes</a></li>
@@ -224,48 +158,48 @@
                         </div>
                         <div class="col-md-3 col-sm-6 col-3"></div>
                         @* <div class="col-md-3 col-sm-6 col-4">
-                            <aside id="text-9" class="widget widget_text">
-                                <h4 class="widget-title"><span>Mailing List</span></h4>
-                                <div class="textwidget">
-                                    <script>(function () {
-                                            window.mc4wp = window.mc4wp || {
-                                                listeners: [],
-                                                forms: {
-                                                    on: function (evt, cb) {
-                                                        window.mc4wp.listeners.push(
-                                                            {
-                                                                event: evt,
-                                                                callback: cb
-                                                            }
-                                                        );
-                                                    }
-                                                }
-                                            }
-                                        })();
-                                    </script>
-                                    <!-- Mailchimp for WordPress v4.8.4 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
-                                    <form id="mc4wp-form-2" class="mc4wp-form mc4wp-form-862 mc4wp-form-basic"
-                                        method="post" data-id="862" data-name="Sign-up Form">
-                                        <div class="mc4wp-form-fields">
-                                            <div class="mail-chimp-wrapper">
-                                                <p>Enter your email address for our mailing list to keep
-                                                    your self our lastest updated.</p>
-                                                <div class="mail-chimp-button">
-                                                    <input type="email" id="mc4wp_email" name="EMAIL"
-                                                        placeholder="Email Address" required />
-                                                    <button type="submit"><i class="fa fa-paper-plane"></i></button>
-                                                </div>
-                                            </div>
-                                        </div><label style="display: none !important;">Leave this field
-                                            empty if you're human: <input type="text" name="_mc4wp_honeypot" value=""
-                                                tabindex="-1" autocomplete="off" /></label><input type="hidden"
-                                            name="_mc4wp_timestamp" value="1694813966" /><input type="hidden"
-                                            name="_mc4wp_form_id" value="862" /><input type="hidden"
-                                            name="_mc4wp_form_element_id" value="mc4wp-form-2" />
-                                        <div class="mc4wp-response"></div>
-                                    </form><!-- / Mailchimp for WordPress Plugin -->
-                                </div>
-                            </aside>
+                        <aside id="text-9" class="widget widget_text">
+                        <h4 class="widget-title"><span>Mailing List</span></h4>
+                        <div class="textwidget">
+                        <script>(function () {
+                        window.mc4wp = window.mc4wp || {
+                        listeners: [],
+                        forms: {
+                        on: function (evt, cb) {
+                        window.mc4wp.listeners.push(
+                        {
+                        event: evt,
+                        callback: cb
+                        }
+                        );
+                        }
+                        }
+                        }
+                        })();
+                        </script>
+                        <!-- Mailchimp for WordPress v4.8.4 - https://wordpress.org/plugins/mailchimp-for-wp/ -->
+                        <form id="mc4wp-form-2" class="mc4wp-form mc4wp-form-862 mc4wp-form-basic"
+                        method="post" data-id="862" data-name="Sign-up Form">
+                        <div class="mc4wp-form-fields">
+                        <div class="mail-chimp-wrapper">
+                        <p>Enter your email address for our mailing list to keep
+                        your self our lastest updated.</p>
+                        <div class="mail-chimp-button">
+                        <input type="email" id="mc4wp_email" name="EMAIL"
+                        placeholder="Email Address" required />
+                        <button type="submit"><i class="fa fa-paper-plane"></i></button>
+                        </div>
+                        </div>
+                        </div><label style="display: none !important;">Leave this field
+                        empty if you're human: <input type="text" name="_mc4wp_honeypot" value=""
+                        tabindex="-1" autocomplete="off" /></label><input type="hidden"
+                        name="_mc4wp_timestamp" value="1694813966" /><input type="hidden"
+                        name="_mc4wp_form_id" value="862" /><input type="hidden"
+                        name="_mc4wp_form_element_id" value="mc4wp-form-2" />
+                        <div class="mc4wp-response"></div>
+                        </form><!-- / Mailchimp for WordPress Plugin -->
+                        </div>
+                        </aside>
                         </div> *@
                     </div>
                 </div>
@@ -276,19 +210,18 @@
                                 <aside id="nav_menu-2" class="widget widget_nav_menu">
                                     <div class="menu-bottom-bar-right-container">
                                         <ul id="menu-bottom-bar-right" class="menu">
-                                            <li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-106 current_page_item menu-item-934">
+                                            <li id="menu-item-934"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-106 current_page_item menu-item-934">
                                                 <a href=# aria-current="page">Home</a>
                                             </li>
                                             <li id="menu-item-935"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935">
-                                                <a
-                                                    href=#>About
+                                                <a href=#>About
                                                     us</a>
                                             </li>
                                             <li id="menu-item-936"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936">
-                                                <a
-                                                    href=#>Contact
+                                                <a href=#>Contact
                                                     Us</a>
                                             </li>
                                         </ul>
@@ -298,8 +231,7 @@
                             <div class="col-md-6 sidebar sidebar-bottom-right">
                                 <aside id="text-5" class="widget widget_text">
                                     <div class="textwidget">
-                                        <p class="bottom-bar-text">@@ <a
-                                                href="#">Junipex vienam</a></p>
+                                        <p class="bottom-bar-text">@@ <a href="#">Junipex vienam</a></p>
                                     </div>
                                 </aside>
                             </div>
