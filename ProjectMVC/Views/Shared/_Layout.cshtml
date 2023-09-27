@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/ProjectMVC.styles.css" asp-append-version="true" />
@@ -71,27 +72,9 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                News
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link text-white dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Contact
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Info@@junipex.vn</a></li>
-                                <li><a class="dropdown-item" href="#">ThomasNguyen@@junipex.vn</a></li>
-                                <li><a class="dropdown-item" href="#">DorasPham@@junipex.vn</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home"
+                                asp-action="News">News</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Home"
@@ -123,14 +106,14 @@
             <div class="container text-center p-2">
                 <div class="align-items-center">
                     <h4 class="sub-description">
-                        Junipex &amp;Apparel Manufacturer &amp;
+                        Junipex &amp; Apparel Manufacturer &amp;
                         Supplier in Vietnam </h4>
                 </div>
             </div>
             <div class="container">
                 <div class="container">
                     <div class="row px-2">
-                        <div class="sidebar col-md-3 col-sm-6 col-1">
+                        <div class="col-md-3 col-sm-6 col-1">
                             <aside>
                                 <h4 class=""><span>Get in touch</span></h4>
                                 <div class="">
@@ -144,7 +127,7 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="sidebar col-md-3 col-sm-6 col-2">
+                        <div class="col-md-3 col-sm-6 col-2">
                             <aside>
                                 <h4><span>Business Hours</span></h4>
                                 <div>
@@ -203,38 +186,27 @@
                         </div> *@
                     </div>
                 </div>
-                <div class="container">
-                    <div class="bottom-bar-inner">
-                        <div class="col">
-                            <div class="row-md-6 sidebar sidebar-bottom-left">
-                                <aside id="nav_menu-2" class="widget widget_nav_menu">
-                                    <div class="menu-bottom-bar-right-container">
-                                        <ul id="menu-bottom-bar-right" class="menu">
-                                            <li id="menu-item-934"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-106 current_page_item menu-item-934">
-                                                <a href=# aria-current="page">Home</a>
-                                            </li>
-                                            <li id="menu-item-935"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-935">
-                                                <a href=#>About
-                                                    us</a>
-                                            </li>
-                                            <li id="menu-item-936"
-                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-936">
-                                                <a href=#>Contact
-                                                    Us</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </aside>
-                            </div>
-                            <div class="col-md-6 sidebar sidebar-bottom-right">
-                                <aside id="text-5" class="widget widget_text">
-                                    <div class="textwidget">
-                                        <p class="bottom-bar-text">@@ <a href="#">Junipex vienam</a></p>
-                                    </div>
-                                </aside>
-                            </div>
+                <hr>
+                <div class="container navbar navbar-expand-sm">
+                    <div class="container">
+                        <div class="container d-flex col col-md-6">
+                            <aside class="navbar row">
+                                <ul class="navbar-nav flex-grow-1 justify-content-bettwen">
+                                    <li class="nav-item"><a class="nav-link" href=#>Home</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href=#>About us</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link" href=#>Contact Us</a>
+                                    </li>
+                                </ul>
+                            </aside>
+                        </div>
+                        <div class="container d-flex col col-md-6 justify-content-end">
+                            <aside >
+                                <div>
+                                    <p>@@Junipex vienam</p>
+                                </div>
+                            </aside>
                         </div>
                     </div>
                 </div>
