@@ -1,6 +1,25 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-8">
+            <style>
+                .card-body {
+                    /* Adjust the height to your preferred value */
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                .card-text {
+                    /* Adjust the height to your preferred value */
+                    max-height: 50px;
+                    /* Adjust the width to your preferred value */
+                    max-width: 100%;
+                    /* Set the content to fit within the height and width */
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            </style>
             <!-- Blog Post 1 -->
             <div class="card mb-4">
                 <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
@@ -9,9 +28,12 @@
                     <p class="card-text">
                         <!-- Content for Post 2 -->
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
                         natus error sit voluptatem accusantium doloremque laudantium.
                     </p>
                     <a href="#" class="btn btn-primary expand-button">Read More</a>
@@ -26,10 +48,14 @@
                     <p class="card-text">
                         <!-- Content for Post 2 -->
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
-                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
                         natus error sit voluptatem accusantium doloremque laudantium.
                     </p>
                     <a href="#" class="btn btn-primary expand-button">Read More</a>
@@ -60,17 +86,17 @@
     // Add a click event listener to each expand button
     expandButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            const cardBody = this.closest(".card-body");
-            const cardText = cardBody.querySelector(".card-text");
-            
-            if (cardText.style.maxHeight) {
-                // Content is currently expanded, so collapse it
-                cardText.style.maxHeight = null;
-                this.textContent = "Read More";
+            const content = button.previousElementSibling;
+
+
+            if (content.style.maxHeight !== 'none') {
+                content.style.maxHeight = 'none';
+                content.style.whiteSpace = 'normal';
+                button.textContent = 'Read Less';
             } else {
-                // Content is currently collapsed, so expand it
-                cardText.style.maxHeight = "1000px"; // Adjust this value as needed
-                this.textContent = "Read Less";
+                content.style.maxHeight = '50px';
+                content.style.whiteSpace = 'nowrap';
+                button.textContent = 'Read More';
             }
         });
     });

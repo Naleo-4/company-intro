@@ -9,6 +9,7 @@ namespace Project.DataAccess.Repository.IRepository
     public interface IUnitOfWork
     {
         ICategoryRepository CategoryRepository { get; }
+        INewsRepository NewsRepository { get; }
         void Save();
     }
 }
