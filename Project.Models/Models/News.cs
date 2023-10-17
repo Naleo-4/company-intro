@@ -13,10 +13,10 @@ namespace Project.Models.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Title { get; set; }
+        public string? Title { get; set; }
         [Required]
-        public string NewsBody { get; set; }
-        public string Image { get; set; }
+        public string? NewsBody { get; set; }
+        public string? Image { get; set; }
         [Required]
         public DateTime Date { get; set; }
     }
