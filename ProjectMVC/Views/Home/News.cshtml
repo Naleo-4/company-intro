@@ -5,10 +5,16 @@
             <div class="card mb-4">
                 <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h2 class="card-title">First Blog Post</h2>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget ipsum a
-                        justo pulvinar aliquam. Fusce eget eros augue.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <h5 class="card-title">Post Title</h5>
+                    <p class="card-text">
+                        <!-- Content for Post 2 -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium.
+                    </p>
+                    <a href="#" class="btn btn-primary expand-button">Read More</a>
                 </div>
             </div>
 
@@ -16,10 +22,17 @@
             <div class="card mb-4">
                 <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h2 class="card-title">Second Blog Post</h2>
-                    <p class="card-text">Pellentesque placerat tincidunt tincidunt. Aliquam erat volutpat. Cras
-                        tristique, odio nec facilisis placerat.</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <h5 class="card-title">Post 2 Title</h5>
+                    <p class="card-text">
+                        <!-- Content for Post 2 -->
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste
+                        natus error sit voluptatem accusantium doloremque laudantium.
+                    </p>
+                    <a href="#" class="btn btn-primary expand-button">Read More</a>
                 </div>
             </div>
         </div>
@@ -39,3 +52,26 @@
         </div>
     </div>
 </div>
+
+<script>
+    // Get all elements with class "expand-button"
+    const expandButtons = document.querySelectorAll(".expand-button");
+
+    // Add a click event listener to each expand button
+    expandButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            const cardBody = this.closest(".card-body");
+            const cardText = cardBody.querySelector(".card-text");
+            
+            if (cardText.style.maxHeight) {
+                // Content is currently expanded, so collapse it
+                cardText.style.maxHeight = null;
+                this.textContent = "Read More";
+            } else {
+                // Content is currently collapsed, so expand it
+                cardText.style.maxHeight = "1000px"; // Adjust this value as needed
+                this.textContent = "Read Less";
+            }
+        });
+    });
+</script>
