@@ -15,7 +15,7 @@ public class CategoryController : Controller
     }
     public IActionResult Index()
     {
-        List<Category> CategoryList = _unitOfWork.CategoryRepository.GetAll().ToList(); 
+        List<Category> CategoryList = _unitOfWork.CategoryRepository.GetAll().ToList();
         return View(CategoryList);
     }
     //Get
@@ -88,7 +88,7 @@ public class CategoryController : Controller
         return View(category);
     }
     //POST
-    [HttpPost,ActionName("Delete")]
+    [HttpPost, ActionName("Delete")]
     // [ValidateAntiForgeryToken]
     public IActionResult DeletePOST(int? id)
     {
@@ -102,5 +102,14 @@ public class CategoryController : Controller
         TempData["Success"] = "Category Deleted Successfully";
         return RedirectToAction("Index", "Category");
     }
+
+    #region API CALL
+    [HttpGet]
+    public IActionResult GetAllNews()
+    {
+        List<News> NewsList = _unitOfWork.NewsRepository.GetAll().ToList();
+        return Json(new { data = _unitOfWork.NewsRepository.GetAll() });
+    }
+    #endregion
 
 }

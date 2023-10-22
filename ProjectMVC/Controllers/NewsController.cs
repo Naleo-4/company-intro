@@ -3,6 +3,7 @@ using Project.Models.Models;
 using Project.DataAccess.Repository.IRepository;
 namespace ProjectMVC.Controllers
 {
+    [Area("Admin")]
     public class NewsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
