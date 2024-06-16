@@ -1,30 +1,42 @@
-﻿@model  Project.Models.Models.Category
+﻿
 @{
     ViewData["Title"] = "Delete";
 }
 <partial name="_Notification" />
 
 <h1>Create</h1>
-<form method="POST" asp-action="Delete">
+@* <form method="POST" asp-action="Delete">
     <input asp-for="ID" hidden>
     <div class="border p-3 mt-4">
-        <h2 class="text-primary">Delete Category</h2>
+        <h2 class="text-primary">Delete Complain</h2>
         <hr>
-    </div>
+    </div> *@
     @* <div asp-validation-summary="All"></div> *@
-    <div class="mb-3">
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" disabled class="form-control"/>
+    @* <div class="mb-3">
+        <label asp-for="ComplainTitle">ComplainTitle</label>
+        <input asp-for="ComplainTitle" disabled class="form-control"/>
     </div>
     <div class="mb-3">
-        <label asp-for="DisplayOrder">DisplayOrder</label>
-        <input asp-for="DisplayOrder" disabled class="form-control"/>
+        <label asp-for="ComplainText">ComplainText</label>
+        <input asp-for="ComplainText" disabled class="form-control"/>
     </div>
-    <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+    <div class="mb-3">
+        <label asp-for="EmailAddress">EmailAddress</label>
+        <input asp-for="EmailAddress" disabled class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="OrderID">OrderID</label>
+        <input asp-for="OrderID" disabled class="form-control"/>
+    </div>
+    <div class="mb-3">
+        <label asp-for="FromDate">FromDate</label>
+        <input asp-for="FromDate" disabled class="form-control"/>
+    </div> *@
+    @* <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
     <a asp-controller="Category" asp-action="Index" class="btn btn-primary" style="width:150px">
         Back to List
     </a>
-</form>
+</form> *@
 @section Scripts{
     @{
         <partial name="_ValidationScriptsPartial" />

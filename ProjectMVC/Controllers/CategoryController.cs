@@ -111,5 +111,4 @@ public class CategoryController : Controller
         return Json(new { data = _unitOfWork.NewsRepository.GetAll() });
     }
     #endregion
-
 }
