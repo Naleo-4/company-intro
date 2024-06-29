@@ -5,6 +5,7 @@
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+.sh
 # Local History for Visual Studio Code
 .history/
 
@@ -72,6 +73,7 @@ BenchmarkDotNet.Artifacts/
 
 # .NET Core
 project.lock.json
+appsettings.json
 project.fragment.lock.json
 artifacts/
 
