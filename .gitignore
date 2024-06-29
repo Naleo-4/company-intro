@@ -7,6 +7,7 @@
 
 .sh
 *.json
+ProjectMVC/appsettings.json
 # Local History for Visual Studio Code
 .history/
 
